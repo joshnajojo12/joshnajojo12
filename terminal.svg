@@ -1,143 +1,161 @@
 
 <svg xmlns="http://www.w3.org/2000/svg"
-     width="900" height="230"
-     viewBox="0 0 900 230">
+     width="900" height="330"
+     viewBox="0 0 900 330">
 
   <style>
     text {
-      font-family: "Cascadia Code", Consolas, monospace;
-      font-size: 16px;
+      font-family: "Cascadia Code", Consolas, "Courier New", monospace;
+      font-size: 15px;
       font-weight: 400;
     }
-
     .user { fill: #3FB950; }
     .command { fill: #FDE68A; }
     .output { fill: #FFFFFF; }
+    .success { fill: #3FB950; font-weight: 600; }
   </style>
 
   <defs>
-    <!-- Every line reveals progressively, then resets for the next loop -->
-
-    <clipPath id="line1" clipPathUnits="userSpaceOnUse">
-      <rect x="24" y="10" width="0" height="26">
-        <animate attributeName="width"
-          values="0;0;195;195;0"
-          keyTimes="0;0.02;0.10;0.88;1"
-          dur="18s" repeatCount="indefinite"/>
+    <clipPath id="a1">
+      <rect x="24" y="10" width="0" height="24">
+        <animate attributeName="width" values="0;195;195"
+          dur="1.2s" begin="0s" fill="freeze"/>
+      </rect>
+    </clipPath>
+    <clipPath id="a2">
+      <rect x="225" y="10" width="0" height="24">
+        <animate attributeName="width" values="0;65;65"
+          dur="0.5s" begin="1.3s" fill="freeze"/>
+      </rect>
+    </clipPath>
+    <clipPath id="a3">
+      <rect x="24" y="40" width="0" height="24">
+        <animate attributeName="width" values="0;200;200"
+          dur="1.2s" begin="2s" fill="freeze"/>
+      </rect>
+    </clipPath>
+    <clipPath id="a4">
+      <rect x="24" y="70" width="0" height="24">
+        <animate attributeName="width" values="0;290;290"
+          dur="1.4s" begin="3.3s" fill="freeze"/>
       </rect>
     </clipPath>
 
-    <clipPath id="line2" clipPathUnits="userSpaceOnUse">
-      <rect x="225" y="10" width="0" height="26">
-        <animate attributeName="width"
-          values="0;0;65;65;0"
-          keyTimes="0;0.09;0.14;0.88;1"
-          dur="18s" repeatCount="indefinite"/>
+    <clipPath id="a5">
+      <rect x="24" y="105" width="0" height="24">
+        <animate attributeName="width" values="0;195;195"
+          dur="1.2s" begin="5s" fill="freeze"/>
+      </rect>
+    </clipPath>
+    <clipPath id="a6">
+      <rect x="225" y="105" width="0" height="24">
+        <animate attributeName="width" values="0;155;155"
+          dur="1.2s" begin="6.3s" fill="freeze"/>
+      </rect>
+    </clipPath>
+    <clipPath id="a7">
+      <rect x="24" y="135" width="0" height="24">
+        <animate attributeName="width" values="0;190;190"
+          dur="1s" begin="7.7s" fill="freeze"/>
+      </rect>
+    </clipPath>
+    <clipPath id="a8">
+      <rect x="24" y="165" width="0" height="24">
+        <animate attributeName="width" values="0;265;265"
+          dur="1.2s" begin="8.8s" fill="freeze"/>
+      </rect>
+    </clipPath>
+    <clipPath id="a9">
+      <rect x="24" y="195" width="0" height="24">
+        <animate attributeName="width" values="0;235;235"
+          dur="1.1s" begin="10.2s" fill="freeze"/>
       </rect>
     </clipPath>
 
-    <clipPath id="line3" clipPathUnits="userSpaceOnUse">
-      <rect x="24" y="40" width="0" height="26">
-        <animate attributeName="width"
-          values="0;0;200;200;0"
-          keyTimes="0;0.15;0.23;0.88;1"
-          dur="18s" repeatCount="indefinite"/>
+    <clipPath id="a10">
+      <rect x="24" y="230" width="0" height="24">
+        <animate attributeName="width" values="0;195;195"
+          dur="1.2s" begin="11.7s" fill="freeze"/>
       </rect>
     </clipPath>
-
-    <clipPath id="line4" clipPathUnits="userSpaceOnUse">
-      <rect x="24" y="70" width="0" height="26">
-        <animate attributeName="width"
-          values="0;0;285;285;0"
-          keyTimes="0;0.24;0.34;0.88;1"
-          dur="18s" repeatCount="indefinite"/>
+    <clipPath id="a11">
+      <rect x="225" y="230" width="0" height="24">
+        <animate attributeName="width" values="0;260;260"
+          dur="1.7s" begin="13s" fill="freeze"/>
       </rect>
     </clipPath>
-
-    <clipPath id="line5" clipPathUnits="userSpaceOnUse">
-      <rect x="24" y="105" width="0" height="26">
-        <animate attributeName="width"
-          values="0;0;195;195;0"
-          keyTimes="0;0.35;0.43;0.88;1"
-          dur="18s" repeatCount="indefinite"/>
+    <clipPath id="a12">
+      <rect x="24" y="260" width="0" height="24">
+        <animate attributeName="width" values="0;195;195"
+          dur="1.2s" begin="14.9s" fill="freeze"/>
       </rect>
     </clipPath>
-
-    <clipPath id="line6" clipPathUnits="userSpaceOnUse">
-      <rect x="225" y="105" width="0" height="26">
-        <animate attributeName="width"
-          values="0;0;155;155;0"
-          keyTimes="0;0.42;0.51;0.88;1"
-          dur="18s" repeatCount="indefinite"/>
-      </rect>
-    </clipPath>
-
-    <clipPath id="line7" clipPathUnits="userSpaceOnUse">
-      <rect x="24" y="135" width="0" height="26">
-        <animate attributeName="width"
-          values="0;0;190;190;0"
-          keyTimes="0;0.52;0.60;0.88;1"
-          dur="18s" repeatCount="indefinite"/>
-      </rect>
-    </clipPath>
-
-    <clipPath id="line8" clipPathUnits="userSpaceOnUse">
-      <rect x="24" y="165" width="0" height="26">
-        <animate attributeName="width"
-          values="0;0;260;260;0"
-          keyTimes="0;0.60;0.70;0.88;1"
-          dur="18s" repeatCount="indefinite"/>
-      </rect>
-    </clipPath>
-
-    <clipPath id="line9" clipPathUnits="userSpaceOnUse">
-      <rect x="24" y="195" width="0" height="26">
-        <animate attributeName="width"
-          values="0;0;235;235;0"
-          keyTimes="0;0.69;0.79;0.88;1"
-          dur="18s" repeatCount="indefinite"/>
+    <clipPath id="a13">
+      <rect x="24" y="290" width="0" height="24">
+        <animate attributeName="width" values="0;275;275"
+          dur="1.5s" begin="16.3s" fill="freeze"/>
       </rect>
     </clipPath>
   </defs>
 
-  <!-- First prompt -->
-  <text x="24" y="30" class="user"
-        clip-path="url(#line1)">joshna@developer:~$</text>
+  <!-- whoami -->
+  <text x="24" y="30" class="user" clip-path="url(#a1)">
+    joshna@developer:~$
+  </text>
+  <text x="225" y="30" class="command" clip-path="url(#a2)">
+    whoami
+  </text>
 
-  <text x="225" y="30" class="command"
-        clip-path="url(#line2)">whoami</text>
+  <text x="24" y="60" class="output" clip-path="url(#a3)">
+    Full Stack Developer
+  </text>
+  <text x="24" y="90" class="output" clip-path="url(#a4)">
+    B.Tech Computer Science Student
+  </text>
 
-  <!-- whoami output -->
-  <text x="24" y="60" class="output"
-        clip-path="url(#line3)">Full Stack Developer</text>
+  <!-- interests -->
+  <text x="24" y="125" class="user" clip-path="url(#a5)">
+    joshna@developer:~$
+  </text>
+  <text x="225" y="125" class="command" clip-path="url(#a6)">
+    cat interests.txt
+  </text>
 
-  <text x="24" y="90" class="output"
-        clip-path="url(#line4)">B.Tech Computer Science Student</text>
+  <text x="24" y="155" class="output" clip-path="url(#a7)">
+    Building applications.
+  </text>
+  <text x="24" y="185" class="output" clip-path="url(#a8)">
+    Exploring AI-powered solutions.
+  </text>
+  <text x="24" y="215" class="output" clip-path="url(#a9)">
+    Contributing to open source.
+  </text>
 
-  <!-- Second prompt -->
-  <text x="24" y="125" class="user"
-        clip-path="url(#line5)">joshna@developer:~$</text>
+  <!-- Thank-you command -->
+  <text x="24" y="250" class="user" clip-path="url(#a10)">
+    joshna@github:~$
+  </text>
+  <text x="225" y="250" class="command" clip-path="url(#a11)">
+    echo "Thanks for visiting!"
+  </text>
 
-  <text x="225" y="125" class="command"
-        clip-path="url(#line6)">cat interests.txt</text>
+  <!-- Command result -->
+  <text x="24" y="280" class="output" clip-path="url(#a12)">
+    Thanks for visiting!
+  </text>
 
-  <!-- Interests -->
-  <text x="24" y="155" class="output"
-        clip-path="url(#line7)">Building applications.</text>
-
-  <text x="24" y="185" class="output"
-        clip-path="url(#line8)">Exploring AI-powered solutions.</text>
-
-  <text x="24" y="215" class="output"
-        clip-path="url(#line9)">Contributing to open source.</text>
+  <!-- Successful process exit -->
+  <text x="24" y="310" class="success" clip-path="url(#a13)">
+    PROCESS EXITED WITH CODE 0
+  </text>
 
   <!-- Blinking cursor -->
-  <rect x="24" y="222" width="9" height="2" fill="#3FB950">
+  <rect x="24" y="318" width="9" height="2" fill="#3FB950">
     <animate attributeName="opacity"
       values="1;0;1"
       dur="0.8s"
-      repeatCount="indefinite"
-      begin="14.5s"/>
+      begin="18s"
+      repeatCount="indefinite"/>
   </rect>
 
 </svg>
