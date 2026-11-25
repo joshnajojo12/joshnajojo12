@@ -1,0 +1,28 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="230" viewBox="0 0 850 230">
+  <rect width="850" height="230" rx="12" fill="#090D0A"/>
+  <rect x="1" y="1" width="848" height="228" rx="12" fill="none" stroke="#24452F"/>
+
+  <circle cx="22" cy="20" r="5" fill="#FF5F57"/>
+  <circle cx="40" cy="20" r="5" fill="#FEBC2E"/>
+  <circle cx="58" cy="20" r="5" fill="#28C840"/>
+  <text x="425" y="24" text-anchor="middle" fill="#82958A" font-family="monospace" font-size="11">joshna@developer — bash</text>
+  <path d="M0 38 H850" stroke="#24452F"/>
+
+  <g font-family="monospace" font-size="16" fill="#39FF88">
+    <text x="25" y="70">joshna@developer:~$</text>
+    <text x="235" y="70">
+      <tspan>whoami</tspan>
+    </text>
+    <text x="25" y="100" fill="#E0E8E1">Full Stack Developer</text>
+    <text x="25" y="125" fill="#E0E8E1">B.Tech Computer Science Student</text>
+
+    <text x="25" y="160">joshna@developer:~$</text>
+    <text x="235" y="160">cat interests.txt</text>
+    <text x="25" y="190" fill="#A6D9B5">Building applications. | Exploring AI. | Open source.</text>
+
+    <rect x="25" y="205" width="9" height="17" fill="#39FF88">
+      <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>
