@@ -131,23 +131,8 @@
     Contributing to open source.
   </text>
 
-  <!-- Thank-you command -->
-  <text x="24" y="250" class="user" clip-path="url(#a10)">
-    joshna@github:~$
-  </text>
-  <text x="225" y="250" class="command" clip-path="url(#a11)">
-    echo "Thanks for visiting!"
-  </text>
-
-  <!-- Command result -->
-  <text x="24" y="280" class="output" clip-path="url(#a12)">
-    Thanks for visiting!
-  </text>
-
-  <!-- Successful process exit -->
-  <text x="24" y="310" class="success" clip-path="url(#a13)">
-    PROCESS EXITED WITH CODE 0
-  </text>
+  
+ 
 
   <!-- Blinking cursor -->
   <rect x="24" y="318" width="9" height="2" fill="#3FB950">
