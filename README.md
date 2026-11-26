@@ -1,6 +1,5 @@
 
 <!-- ================= TERMINAL INTRO ================= -->
-
 <h1 align="center">JOSHNA JOJO</h1>
 
 <p align="center">
